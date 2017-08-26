@@ -7,7 +7,7 @@
 	width: 600px;
 	height: 400px;
 	overflow:hidden;
-	margin: 50px auto;
+	margin: 50px auto 0px;
 }
 #slider img {
 	width: 600px;
@@ -19,7 +19,7 @@
 
 a{
 	padding: 15px 20px;
-	margin-top: 5px;
+	margin-top: 10px;
 	background-color: #F0F0F0;
 	text-decoration: none;
 	color: #666;
@@ -34,4 +34,11 @@ a.left{
 
 a.right{
 	float: right;
+}
+
+.highlight {
+	background-color: #CEBFC6;
+	border-style: solid;
+	border-color: #DC8DB5;
+	border-width: 2px;
 }

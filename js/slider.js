@@ -58,3 +58,13 @@ $("#slider  img").hover(
         startSlider();
     }
  );
+
+$("a").hover(
+	function()
+{
+	$(this).addClass("highlight");
+},
+function(){
+	$(this).removeClass("highlight");
+}
+);
