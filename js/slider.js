@@ -1,5 +1,7 @@
 sliderInt = 1;
 sliderNext = 2;
+play = true;
+kn = false;
 
 $(document).ready(function(){
 	$('#slider img#1').fadeIn(300);
@@ -51,11 +53,17 @@ function showSlide(id){
 $("#slider  img").hover(
 	function()
     {
-       stopLoop();
+    	if (play === true && kn===false) {
+    		stopLoop();
+    		play = false;
+    	}
     },
     function()
     {
-        startSlider();
+    	if (play === false && kn===false) {
+    		startSlider();
+    		play = true;
+    	}
     }
  );
 
@@ -68,3 +76,19 @@ function(){
 	$(this).removeClass("highlight");
 }
 );
+
+function knopkapusk(){
+	if (play === true) {
+		stopLoop();
+		$('#knopka').replaceWith('<img id="knopka" src="images/play.png">')
+		play = false;
+		kn = true;
+
+	} else {
+		startSlider();
+		$('#knopka').replaceWith('<img id="knopka" src="images/stop.png">')
+		play = true;
+		kn = false;
+	}
+
+};
